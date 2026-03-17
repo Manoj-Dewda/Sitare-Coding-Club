@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall of Fame - Sitare Coding Club</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="https://sitare.org/univ/" target="_blank">
+                <img src="{{ url_for('static', filename='images/sitare-logo.jpeg') }}" alt="Coding Club Logo" class="sitare-logo">
+            </a>
+                    </div>
+        <div class="title-container">
+            <h1 id="sitare-coding-club" class="club-name">&lt;Sitare Coding Club/&gt;</h1>
+            <h2 id="sitare-university" class="university-name">Sitare University</h2>
+        </div>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/code-logo.png') }}" alt="Coding Club Logo" class="coding-logo">
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('wall_of_fame') }}" class="active">Wall of Fame</a>
+        <a href="{{ url_for('index') }}#about">About Us</a>
+        <a href="{{ url_for('index') }}#contact">Contact</a>
+    </nav>
+
+    <main class="content" role="main">
+        <section class="wall-of-fame">
+            <h2 class="section-title">Wall of Fame</h2>
+            
+            <!-- <div class="achievement-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+                <button class="filter-btn" data-filter="competition">Competitions</button>
+                <button class="filter-btn" data-filter="project">Projects</button>
+            </div> -->
+            <section class="winners-section">
+                <h2  class="section-title">Pyquest 2K24 Winners (1st Year)</h2>
+                <div class="winners-year">
+                    
+                </div>
+                <div class="winners-grid first-year">
+                    <!-- 1st Year Winner Cards -->
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Sunny.jpg') }}" style="margin: 1px;" alt="Winner">
+                            <div class="rank-badge">1st</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Sunny Kumar</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Himanshu.jpg') }}" alt="Winner">
+                            <div class="rank-badge">2nd</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Himanshu Srivastav</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Yuvraj.jpg') }}" alt="Winner">
+                            <div class="rank-badge">3rd</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Yuvraj Chirag</p>
+                        </div>
+                    </div>
+                </div>
+                <h2  class="section-title">Pyquest 2K24 Winners (2nd Year)</h2>
+
+                <div class="winners-year">
+                </div>
+                <div class="winners-grid second-year">
+                    <!-- 2nd Year Winner Cards -->
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Sanjay.jpg') }}" alt="Winner">
+                            <div class="rank-badge">1st</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Sanjay VP</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Ritik.jpg') }}" alt="Winner">
+                            <div class="rank-badge">2nd</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Ritik Kumar</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Jitendra.jpg') }}" alt="Winner">
+                            <div class="rank-badge">3rd</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Jitendra Kumar</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card hackathon">
+                        <div class="achievement-image">
+                            <img src="{{ url_for('static', filename='images/Prakash.jpg') }}" alt="Winner">
+                            <div class="rank-badge">3rd</div>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Pyquest</h3>
+                            <p>Prakash Marandi</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div><br>
+            <p>&copy;2024 Sitare Coding Club. <br><span class="love-message">Made with <i class="fas fa-heart"></i> by <a href="{{ url_for('developers') }}">developers</a>, for developers</span></p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
